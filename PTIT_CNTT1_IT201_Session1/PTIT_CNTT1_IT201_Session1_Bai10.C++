@@ -41,7 +41,7 @@ int main()
     printf("\n");
     int len = strlen(s);
     int len2 = strlen(s2);
-    
+}
 // Cach 1 : time complexity : O(n)
 //          space complexity:O(1)
 // Cach 2 : time complexity : O(n log n)
