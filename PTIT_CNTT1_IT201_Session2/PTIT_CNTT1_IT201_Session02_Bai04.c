@@ -15,6 +15,10 @@ int main()
     printf("Enter position :");
     int pos;
     scanf("%d", &pos);
+    if(pos<1||pos>n) {
+        printf("Position doesnt exist");
+        return 0;
+    }
     printf("Enter the value :");
     int value;
     scanf("%d", &value);
