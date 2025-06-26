@@ -40,7 +40,7 @@ int main()
     char tmpName[30];
     for (int i = 0; i < 5; i++)
     {
-        strcpy(tmpName, st[i].name);
+        strcpy(tmpName, st[i].name);;
         toLowerCase(tmpName);
         if (strstr(tmpName, name) != NULL)
         {
