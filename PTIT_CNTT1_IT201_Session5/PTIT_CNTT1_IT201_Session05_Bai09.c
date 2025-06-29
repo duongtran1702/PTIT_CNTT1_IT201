@@ -10,6 +10,7 @@ int countPaths(int i, int j)
         return 1;
     return countPaths(i + 1, j) + countPaths(i, j + 1);
 }
+
 int countPathsDp(int rows,int cols){
     int dp[MAX][MAX]={0};
     dp[0][0]=1;
