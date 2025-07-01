@@ -32,6 +32,9 @@ int main()
     int *a = (int *)calloc(n, sizeof(int));
     for (int i = 0; i < n; i++)
         scanf("%d", a + i);
+    for (int i = 0; i < n; i++)
+        printf("%d ", a[i]);
+    printf("\n");
     bubbleSort(a, n);
     for (int i = 0; i < n; i++)
         printf("%d ", a[i]);

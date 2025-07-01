@@ -7,7 +7,7 @@ void swap(int *x, int *y)
     *y = temp;
 }
 
-void bubbleSort(int *a, int n)
+void selectionSort(int *a, int n)
 {
     for (int i = 0; i < n; i++)
     {
@@ -29,7 +29,10 @@ int main()
     int *a = (int *)calloc(n, sizeof(int));
     for (int i = 0; i < n; i++)
         scanf("%d", a + i);
-    bubbleSort(a, n);
+    for (int i = 0; i < n; i++)
+        printf("%d ", a[i]);
+    printf("\n");
+    selectionSort(a, n);
     for (int i = 0; i < n; i++)
         printf("%d ", a[i]);
     return 0;

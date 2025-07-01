@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void bubbleSort(int *a, int n)
+void insertionSort(int *a, int n)
 {
     for (int i = 1; i < n; i++)
     {
@@ -23,7 +23,10 @@ int main()
     int *a = (int *)calloc(n, sizeof(int));
     for (int i = 0; i < n; i++)
         scanf("%d", a + i);
-    bubbleSort(a, n);
+    for (int i = 0; i < n; i++)
+        printf("%d ", a[i]);
+    printf("\n");
+    insertionSort(a, n);
     for (int i = 0; i < n; i++)
         printf("%d ", a[i]);
     return 0;
