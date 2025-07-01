@@ -28,5 +28,5 @@ int main()
     for (int i = 0; i < n; i++)
         printf("%d ", a[i]);
     free(a);
-    return 0;
+    return 0;//time complexity:O n^2
 }
