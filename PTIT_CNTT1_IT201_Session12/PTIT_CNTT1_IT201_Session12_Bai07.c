@@ -28,6 +28,7 @@ void displayList(Node *head)
     }
     printf("-> NULL\n");
 }
+
 int lengthList(Node *head)
 {
     int i = 0;
@@ -54,19 +55,16 @@ Node *removeMinNode(Node **start)
         }
         curNode = curNode->next;
     }
-
     // Gỡ minNode ra khỏi danh sách
     if (minNode->pre)
         minNode->pre->next = minNode->next;
     if (minNode->next)
         minNode->next->pre = minNode->pre;
-
     // Nếu minNode là node đầu tiên (start)
     if (*start == minNode)
         *start = minNode->next;
 
     minNode->next = minNode->pre = NULL;
-
     return minNode;
 }
 
@@ -97,39 +95,12 @@ void selectionSortInPlace(Node **headRef, int length)
 
     for (int i = 0; i < length - 1 && current != NULL; i++)
     {
-        // printf("\nIteration %d - Current list:\n", i + 1);
-        // displayList(*headRef);
 
-        // Gỡ node nhỏ nhất từ đoạn bắt đầu tại current
         Node *minNode = removeMinNode(&current);
-
-        // printf("After removing the minimum node (value = %d):\n", minNode->data);
-        // displayList(*headRef);
-
-        // Nếu current chính là node nhỏ nhất thì không cần chèn
         if (minNode != current)
         {
-            // Gỡ current khỏi danh sách hiện tại
-            if (current->pre)
-                current->pre->next = current->next;
-            if (current->next)
-                current->next->pre = current->pre;
-
-            // Nếu current là node đầu
-            if (*headRef == current)
-                *headRef = current->next;
-
-            // printf("After removing current node (value = %d):\n", current->data);
-            // displayList(*headRef);
-            
             // Chèn minNode vào trước vị trí current
             insertBefore(headRef, current, minNode);
-
-            // printf("Inserted node %d before node %d:\n", minNode->data, current->data);
-            // displayList(*headRef);
-
-            // Sau khi chèn, current vẫn nằm sau minNode, nên ta giữ current như cũ
-            // Vì vậy không cần gán current = current->next;
         }
         else
         {
@@ -137,13 +108,11 @@ void selectionSortInPlace(Node **headRef, int length)
         }
     }
 }
-
 int main()
 {
     int a[10] = {2, 8, 9, 5, 1, 3, 4, 0, 6, 7};
     Node *head = createNode(a[0]);
     Node *cur = head;
-
     for (int i = 1; i < 10; i++)
     {
         Node *newNode = createNode(a[i]);
