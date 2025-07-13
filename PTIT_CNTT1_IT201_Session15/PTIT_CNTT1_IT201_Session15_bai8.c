@@ -159,6 +159,7 @@ int main()
             display(q_normal, "normal");
         }
     }
+    
     for (int i = q_old->front; i <= q_old->rear; i++)
     {
         free(q_old->list[i]);

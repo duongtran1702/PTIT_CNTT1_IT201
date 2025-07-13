@@ -63,7 +63,9 @@
         "PTIT_CNTT1_IT201_Session1_Bai07.C": "cpp",
         "PTIT_CNTT1_IT201_Session1_Bai08.C": "cpp",
         "PTIT_CNTT1_IT201_Session1_Bai09.C": "cpp",
-        "PTIT_CNTT1_IT201_Session1_Bai10.C": "cpp"
+        "PTIT_CNTT1_IT201_Session1_Bai10.C": "cpp",
+        "text_encoding": "c",
+        "typeinfo": "c"
     },
     "background.fullscreen": {
         // Local images can be dragged into the browser to quickly get the file protocol address from the address bar
