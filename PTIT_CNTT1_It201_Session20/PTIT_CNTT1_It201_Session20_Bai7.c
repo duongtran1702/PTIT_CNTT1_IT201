@@ -49,6 +49,7 @@ void deleteNode(TreeNode *root, int key)
         return;
 
     TreeNode *target = NULL, *last = NULL;
+    
     TreeNode **q = malloc(100 * sizeof(TreeNode *));
     int front = 0, rear = 0;
     q[rear++] = root;
